@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HangUp</string>
+    <string name="accessibility_description">省心自动挂断电话功能。</string>
 </resources>

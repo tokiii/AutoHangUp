@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.PermissionUtils;
+import com.blankj.utilcode.util.ToastUtils;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,12 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 PermissionUtils.permission(Manifest.permission.CALL_PHONE).callback(new PermissionUtils.SimpleCallback() {
                     @Override
                     public void onGranted() {
-
+                        ToastUtils.showShort("权限开启成功");
                     }
 
                     @Override
                     public void onDenied() {
-
+                        ToastUtils.showShort("权限开启失败");
                     }
                 }).request();
                 break;

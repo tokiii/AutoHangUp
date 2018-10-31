@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,18 +7,29 @@
     tools:context=".MainActivity">
 
 
-
     <Button
         android:id="@+id/btn_open_accessibility"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/shape_button_bg"
         android:text="打开辅助开关"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
 
 
     <Button
         android:id="@+id/btn_open_permission"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button_bg"
         android:text="打开挂电话权限"
-        android:layout_height="wrap_content" />
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
