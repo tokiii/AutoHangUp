@@ -6,8 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
+import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.PermissionUtils;
+import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
 
 
@@ -15,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btn_open_accessibility;
     Button btn_open_permission;
+    Button btn_save_time;
+    EditText et_time;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_open_permission = findViewById(R.id.btn_open_permission);
         btn_open_accessibility.setOnClickListener(this);
         btn_open_permission.setOnClickListener(this);
+        btn_save_time = findViewById(R.id.btn_save_time);
+        btn_save_time.setOnClickListener(this);
+        et_time = findViewById(R.id.et_time);
+        et_time.setText(SPUtils.getInstance().getInt("time", 1000) + "");
+        et_time.setSelection(et_time.getText().toString().length());
     }
 
 
@@ -46,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         ToastUtils.showShort("权限开启失败");
                     }
                 }).request();
+                break;
+
+            case R.id.btn_save_time:
+                SPUtils.getInstance().put("time", Integer.valueOf(et_time.getText().toString()));
+                ToastUtils.showShort("保存成功,重新开启辅助权限");
                 break;
         }
     }

@@ -5,6 +5,6 @@
     <!-- 填充颜色 -->
     <solid android:color="#0369ed"/>
 
-    <stroke android:color="#0e0420" android:width="1dp"/>
+    <corners android:radius="10dp" />
 
 </shape>

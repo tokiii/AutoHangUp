@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.telephony.TelephonyManager;
 import android.view.accessibility.AccessibilityEvent;
 
+import com.blankj.utilcode.util.SPUtils;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -55,7 +57,7 @@ public class HangUpService extends AccessibilityService {
                                 e.printStackTrace();
                             }
                         }
-                    }, 500);
+                    }, SPUtils.getInstance().getInt("time", 1000));
 
                 } catch (NoSuchMethodException e) {
                     e.printStackTrace();

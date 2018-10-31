@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     tools:context=".MainActivity">
 
 
@@ -11,25 +13,42 @@
         android:id="@+id/btn_open_accessibility"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/shape_button_bg"
         android:text="打开辅助开关"
-        android:textStyle="bold"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btn_open_permission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_button_bg"
         android:text="打开挂电话权限"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+
+
+    <EditText
+        android:id="@+id/et_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="设置界面出现挂断间隔"
+        android:inputType="number"
+        android:text="1000" />
+
+    <Button
+        android:id="@+id/btn_save_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_button_bg"
+        android:text="保存时间"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 </LinearLayout>
